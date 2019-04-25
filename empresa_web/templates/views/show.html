@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Lista de Funcionários</h1>
+
+    <ul>
+        <li><a href="{% url 'url_home' %}">Página Inicial</a></li>
+        <li><a href="{% url 'url_create' %}">Cadastrar Funcionário</a></li>
+        <li><a href="{% url 'url_show' %}">Lista de Funcionários</a></li>
+    </ul>
+
+    <div style="max-width: 50%;">
+        <table style="border: 1px solid #BBB; width: 100%;">
+            <thead>
+                <tr style="border-bottom: 1px solid #AAA">
+                    <td><b>Nome</b></td>
+                    <td><b>CPF</b></td>
+                    <td><b>Remuneração</b></td>
+                    <td><b>Tempo de Serviço</b></td>
+                    <td><b>Ações</b></td>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for funcionario in funcionarios %}
+                    <tr>
+                        <td>{{ funcionario.nome }} {{ funcionario.sobrenome }}</td>
+                        <td>{{ funcionario.cpf }}</td>
+                        <td>{{ funcionario.remuneracao }}</td>
+                        <td>{{ funcionario.tempo_de_servico }}</td>
+                        <td><a href="{% url 'url_update' funcionario.id %}">Atualizar</a></td>
+                        <td><a href="{% url 'url_delete' funcionario.id %}">Excluir</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

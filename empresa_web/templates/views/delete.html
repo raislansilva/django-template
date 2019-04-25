@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Página de Exclusão de Funcionário</h1>
+
+    <ul>
+       <li><a href="{% url 'url_home' %}">Página Inicial</a></li>
+        <li><a href="{% url 'url_create' %}">Cadastrar Funcionário</a></li>
+        <li><a href="{% url 'url_show' %}">Lista de Funcionários</a></li>
+    </ul>
+
+    <form method="post" style="border: 1px solid #AAA; margin: 64px auto; padding: 32px; width: 50%;">
+        <!-- É necessário colocar o código abaixo em toda página que                   -->
+        <!-- contenha um formulário para evitar o ataque de Cross Site Request Forgery -->
+        {% csrf_token %}
+
+        Você tem certeza que quer excluir o funcionário <b>{{ funcionario.nome }}</b>? <br><br>
+
+        <button type="button">
+            <a href="{% url 'url_show' %}">Cancelar</a>
+        </button>
+        <button>Excluir</button>
+    </form>
+</body>
+</html>
