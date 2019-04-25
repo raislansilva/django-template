@@ -6,10 +6,15 @@
 
 
 {% block conteudo %}
-{% if request.session.msg %}
-    <div class="alert alert-success" role="alert">
-            {{ request.session.msg }}
-    </div>
+{% if messages %}
+   {% for message in messages %}
+      <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        {{ message }}
+      </div>
+   {% endfor %}
 {% endif %}
 
 <div class="container">
@@ -73,4 +78,6 @@
     </div>
   </div>
 </div>
+
 {% endblock %}
+

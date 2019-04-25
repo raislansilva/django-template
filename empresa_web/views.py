@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Funcionario
 from .form import FormFuncionario
 from django.shortcuts import redirect
+from django.contrib import messages
 
 # Create your views here.
 
@@ -22,7 +23,8 @@ def create(request):
     form = FormFuncionario(request.POST or None)
     if form.is_valid():
         form.save()
-        request.session['msg'] = 'Usuario Cadastrado'
+        #request.session['msg'] = 'Usuario Cadastrado'
+        messages.success(request,'Usuario Cadastrado')
     data['form'] = form
     return render(request, 'views/form.html', data)
 
