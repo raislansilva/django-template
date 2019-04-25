@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+  <head>
+    <!-- Title -->
+    <title>
+      {% block title %}Sistema de Gerenciamento de Funcionários{% endblock %}
+    </title>
+
+    <!-- Favicon -->
+    <!--<link rel="shortcut icon" href="{% static 'website/img/favicon.png' %}" type="image/png">-->
+
+    <!-- Arquivos CSS -->
+    <!--<link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/master.css' %}">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+
+    <!-- Bloco de Estilos -->
+    {% block styles %}{% endblock %}
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'url_home' %}">
+          <img src="{% static 'website/img/favicon.png' %}" height='45px'>
+        </a>
+        <button class="navbar-toggler" type="button"
+            data-toggle="collapse" data-target="#conteudo-navbar"
+            aria-controls="conteudo-navbar" aria-expanded="false"
+            aria-label="Ativar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudo-navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'url_home' %}">
+                      Página Inicial
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'url_show' %}">
+                      Funcionários
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Bloco de conteúdo -->
+    {% block conteudo %}{% endblock %}
+
+    <!-- Arquivos necessários para o Bootstrap -->
+    <script src="{% static 'website/js/jquery.min.js' %}"></script>
+    <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+
+    <!-- Bloco de scripts -->
+    {% block scripts %}{% endblock %}
+
+    <!-- Scripts.js -->
+    <script src="{% static 'website/js/scripts.js' %}"></script>
+  </body>
+</html>

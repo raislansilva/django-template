@@ -1,43 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h1>Lista de Funcionários</h1>
+{% extends "views/_layouts/base.html" %}
 
-    <ul>
-        <li><a href="{% url 'url_home' %}">Página Inicial</a></li>
-        <li><a href="{% url 'url_create' %}">Cadastrar Funcionário</a></li>
-        <li><a href="{% url 'url_show' %}">Lista de Funcionários</a></li>
-    </ul>
+{% block title %}Lista de Funcionários{% endblock %}
 
-    <div style="max-width: 50%;">
-        <table style="border: 1px solid #BBB; width: 100%;">
-            <thead>
-                <tr style="border-bottom: 1px solid #AAA">
-                    <td><b>Nome</b></td>
-                    <td><b>CPF</b></td>
-                    <td><b>Remuneração</b></td>
-                    <td><b>Tempo de Serviço</b></td>
-                    <td><b>Ações</b></td>
+{% block conteudo %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lista de Funcionário</h5>
+
+          {% if funcionarios|length > 0 %}
+            <p class="card-text">
+              Aqui está a lista de <code>Funcionários</code> cadastrados.
+            </p>
+
+            <table class="table">
+              <thead class="thead-dark">
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Tempo de Serviço</th>
+                <th>Remuneração</th>
+                <th>Ações</th>
+              </tr>
+              </thead>
+
+              <tbody>
+              {% for funcionario in funcionarios %}
+                <tr>
+                  <td>{{ funcionario.id }}</td>
+                  <td>{{ funcionario.nome }}</td>
+                  <td>{{ funcionario.sobrenome }}</td>
+                  <td>{{ funcionario.tempo_de_servico }}</td>
+                  <td>{{ funcionario.remuneracao }}</td>
+                  <td>
+                    <a href="{% url 'url_update' pk=funcionario.id %}"
+                       class="btn btn-info">
+                      Atualizar
+                    </a>
+                    <a href="{% url 'url_pageDelete' pk=funcionario.id %}"
+                      class="btn btn-outline-danger">
+                        Excluir
+                    </a>
+                  </td>
                 </tr>
-            </thead>
-
-            <tbody>
-                {% for funcionario in funcionarios %}
-                    <tr>
-                        <td>{{ funcionario.nome }} {{ funcionario.sobrenome }}</td>
-                        <td>{{ funcionario.cpf }}</td>
-                        <td>{{ funcionario.remuneracao }}</td>
-                        <td>{{ funcionario.tempo_de_servico }}</td>
-                        <td><a href="{% url 'url_update' funcionario.id %}">Atualizar</a></td>
-                        <td><a href="{% url 'url_delete' funcionario.id %}">Excluir</a></td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+              {% endfor %}
+              </tbody>
+            </table>
+        {% else %}
+          <div class="text-center mt-5 mb-5 jumbotron">
+            <h5>Nenhum <code>Funcionário</code> cadastrado ainda.</h5>
+          </div>
+        {% endif %}
+          <hr />
+          <div class="text-right">
+            <a href="{% url 'url_create' %}" class="btn btn-primary">
+              Cadastrar Funcionário
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-</html>
+  </div>
+</div>
+{% endblock %}

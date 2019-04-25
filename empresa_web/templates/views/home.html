@@ -1,16 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h1>Página Inicial</h1>
+<!-- Estendemos do template base -->
+{% extends "views/_layouts/base.html" %}
 
-    <ul>
-        <li><a href="{% url 'url_home' %}">Página Inicial</a></li>
-        <li><a href="{% url 'url_create' %}">Cadastrar Funcionário</a></li>
-        <li><a href="{% url 'url_show' %}">Lista de Funcionários</a></li>
-    </ul>
-</body>
-</html>
+<!-- Bloco que define o <title></title> da nossa página -->
+{% block title %}Página Inicial{% endblock %}
+
+<!-- Bloco de conteúdo da nossa página -->
+{% block conteudo %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Cadastrar Funcionário</h5>
+          <p class="card-text">
+            Cadastre aqui um novo <code>Funcionário</code>.
+          </p>
+          <a href="{% url 'url_create' %}"
+             class="btn btn-primary">
+            Novo Funcionário
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lista de Funcionários</h5>
+          <p class="card-text">
+            Veja aqui a lista de <code>Funcionários</code> cadastrados.
+          </p>
+          <a href="{% url 'url_show' %}"
+             class="btn btn-primary">
+            Vá para Lista
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,26 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h1>Página de Inserção de Funcionário</h1>
+{% extends "views/_layouts/base.html" %}
 
-    <ul>
-        <li><a href="{% url 'url_home' %}">Página Inicial</a></li>
-        <li><a href="{% url 'url_create' %}">Cadastrar Funcionário</a></li>
-        <li><a href="{% url 'url_show' %}">Lista de Funcionários</a></li>
-    </ul>
+{% load widget_tweaks %}
 
-    <form method="post">
-        <!-- É necessário colocar o código abaixo em toda página que                   -->
-        <!-- contenha um formulário para evitar o ataque de Cross Site Request Forgery -->
-        {% csrf_token %}
+{% block title %}Cadastro de Funcionários{% endblock %}
 
-        {{ form }}
 
-        <button>Enviar</button>
-    </form>
-</body>
-</html>
+{% block conteudo %}
+{% if request.session.msg %}
+    <div class="alert alert-success" role="alert">
+            {{ request.session.msg }}
+    </div>
+{% endif %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Cadastro de Funcionário</h5>
+          <p class="card-text">
+            Complete o formulário abaixo para cadastrar
+            um novo <code>Funcionário</code>.
+          </p>
+          <form method="post">
+            <!-- Não se esqueça dessa tag -->
+            {% csrf_token %}
+
+            <!-- Nome -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Nome</span>
+              </div>
+              {% render_field form.nome class+="form-control" %}
+            </div>
+
+            <!-- Sobrenome -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Sobrenome</span>
+              </div>
+              {% render_field form.sobrenome class+="form-control" %}
+            </div>
+
+            <!-- CPF -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">CPF</span>
+              </div>
+              {% render_field form.cpf class+="form-control" %}
+            </div>
+
+            <!-- Tempo de Serviço -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Tempo de Serviço</span>
+              </div>
+              {% render_field form.tempo_de_servico class+="form-control" %}
+            </div>
+
+            <!-- Remuneração -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Remuneração</span>
+              </div>
+              {% render_field form.remuneracao class+="form-control" %}
+            </div>
+
+            <button class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

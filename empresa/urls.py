@@ -16,7 +16,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from empresa_web.views import home, show, create, update, delete
+from empresa_web.views import home, show, create, update, delete, pageDelete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +24,6 @@ urlpatterns = [
     path('funcionario/', show, name='url_show'),
     path('funcionario/create/', create, name='url_create'),
     path('funcionario/update/<int:pk>', update, name='url_update'),
-    path('funcionario/delete/<int:pk>', delete, name='url_delete')
+    path('funcionario/delete/<int:pk>', delete, name='url_delete'),
+    path('funcionario/pageDelete/<int:pk>',pageDelete, name='url_pageDelete')
 ]

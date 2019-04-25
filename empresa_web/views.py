@@ -22,9 +22,10 @@ def create(request):
     form = FormFuncionario(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('url_show')
+        request.session['msg'] = 'Usuario Cadastrado'
     data['form'] = form
     return render(request, 'views/form.html', data)
+
 
 def update(request, pk):
     data = {}
@@ -38,9 +39,18 @@ def update(request, pk):
     return render(request, 'views/form.html', data)
 
 
+def pageDelete(request, pk):
+    data = {}
+    transacao = Funcionario.objects.get(pk=pk)
+    data['funcionario'] = transacao
+    return render(request, 'views/delete.html', data)
+
+
 def delete(request, pk):
     transacao = Funcionario.objects.get(pk=pk)
     transacao.delete()
     return redirect('url_show')
+
+
 
 

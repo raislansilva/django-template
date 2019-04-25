@@ -1,29 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h1>Página de Exclusão de Funcionário</h1>
+<!-- Estendemos do template base -->
+{% extends "views/_layouts/base.html" %}
 
-    <ul>
-       <li><a href="{% url 'url_home' %}">Página Inicial</a></li>
-        <li><a href="{% url 'url_create' %}">Cadastrar Funcionário</a></li>
-        <li><a href="{% url 'url_show' %}">Lista de Funcionários</a></li>
-    </ul>
+<!-- Bloco que define o <title></title> da nossa página -->
+{% block title %}Página Inicial{% endblock %}
 
-    <form method="post" style="border: 1px solid #AAA; margin: 64px auto; padding: 32px; width: 50%;">
-        <!-- É necessário colocar o código abaixo em toda página que                   -->
-        <!-- contenha um formulário para evitar o ataque de Cross Site Request Forgery -->
-        {% csrf_token %}
+<!-- Bloco de conteúdo da nossa página -->
+{% block conteudo %}
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Exclusão de Funcionário</h5>
 
-        Você tem certeza que quer excluir o funcionário <b>{{ funcionario.nome }}</b>? <br><br>
+        <p class="card-text">
+          Você tem certeza que quer excluir o funcionário
+          <b>{{ funcionario.nome }}</b>
+        </p>
 
-        <button type="button">
-            <a href="{% url 'url_show' %}">Cancelar</a>
-        </button>
-        <button>Excluir</button>
-    </form>
-</body>
-</html>
+        <form method="post">
+          {% csrf_token %}
+
+          <hr />
+          <a class="text-right">
+            <a href="{% url 'url_show' %}"
+              class="btn btn-outline-danger">
+                Cancelar
+            </a>
+              <a class="btn btn-danger" href="{% url 'url_delete' pk=funcionario.id %}">Excluir</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
