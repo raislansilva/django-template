@@ -53,6 +53,9 @@ def delete(request, pk):
     transacao.delete()
     return redirect('url_show')
 
+def pagelogin(request):
+    return render(request, 'views/login.html')
+
 
 
 

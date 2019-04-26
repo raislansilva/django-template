@@ -15,11 +15,12 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from empresa_web.views import home, show, create, update, delete, pageDelete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('account/', include('django.contrib.auth.urls')),
     path('', home, name='url_home'),
     path('funcionario/', show, name='url_show'),
     path('funcionario/create/', create, name='url_create'),
