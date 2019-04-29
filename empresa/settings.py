@@ -52,6 +52,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'empresa.urls'
+#ROOT_URLCONF = 'empresa_web.urls'
 
 TEMPLATES = [
     {
@@ -123,4 +124,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'

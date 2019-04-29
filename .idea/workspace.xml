@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49b41bd7-7fbd-4ea5-a3a0-12aa2b0690a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/empresa_web/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa_web/templates/views/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa_web/templates/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa_web/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/empresa/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/empresa/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa_web/templates/views/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa_web/templates/views/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa_web/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa_web/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa_web/templates/views/_layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa_web/templates/crud/_layouts/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa_web/templates/views/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa_web/templates/crud/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa_web/templates/views/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa_web/templates/crud/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa_web/templates/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa_web/templates/crud/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa_web/templates/views/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa_web/templates/crud/show.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa_web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/empresa_web/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,18 +28,18 @@
         <entry file="file://$PROJECT_DIR$/empresa_web/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/empresa/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+            <state relative-caret-position="423">
+              <caret line="31" column="49" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="49" />
               <folding>
-                <element signature="e#632#664#0" expanded="true" />
+                <element signature="e#626#658#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/empresa_web/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="56" column="46" lean-forward="true" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+            <state relative-caret-position="510">
+              <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -53,28 +58,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empresa_web/templates/views/home.html">
+        <entry file="file://$PROJECT_DIR$/empresa_web/templates/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-95">
-              <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empresa/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empresa_web/templates/views/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="40" lean-forward="true" selection-start-column="40" selection-end-column="40" />
+            <state relative-caret-position="105">
+              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -82,13 +69,57 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/empresa_web/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="90">
+              <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/empresa_web/templates/crud/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-116">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/empresa/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/empresa_web/templates/crud/_layouts/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/empresa_web/templates/views</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -104,18 +135,24 @@
         <option value="$PROJECT_DIR$/empresa_web/static/web/js/alert.js" />
         <option value="$PROJECT_DIR$/empresa_web/templates/views/_layouts/base.html" />
         <option value="$PROJECT_DIR$/empresa_web/templates/views/form.html" />
-        <option value="$PROJECT_DIR$/empresa_web/views.py" />
-        <option value="$PROJECT_DIR$/empresa_web/urls.py" />
-        <option value="$PROJECT_DIR$/empresa/settings.py" />
         <option value="$PROJECT_DIR$/empresa_web/templates/views/login.html" />
-        <option value="$PROJECT_DIR$/empresa_web/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/empresa_web/templates/signup.html" />
+        <option value="$PROJECT_DIR$/empresa_web/views.py" />
+        <option value="$PROJECT_DIR$/empresa_web/templates/crud/delete.html" />
+        <option value="$PROJECT_DIR$/empresa_web/templates/crud/form.html" />
+        <option value="$PROJECT_DIR$/empresa_web/templates/crud/home.html" />
+        <option value="$PROJECT_DIR$/empresa_web/templates/crud/show.html" />
+        <option value="$PROJECT_DIR$/empresa/settings.py" />
         <option value="$PROJECT_DIR$/empresa/urls.py" />
+        <option value="$PROJECT_DIR$/empresa_web/urls.py" />
+        <option value="$PROJECT_DIR$/empresa_web/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/manage.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="278" />
-    <option name="y" value="61" />
+    <option name="x" value="312" />
+    <option name="y" value="77" />
     <option name="width" value="1433" />
     <option name="height" value="859" />
   </component>
@@ -124,34 +161,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="django-template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django-template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django-template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django-template" type="462c0819:PsiDirectoryNode" />
-              <item name="empresa" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django-template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django-template" type="462c0819:PsiDirectoryNode" />
-              <item name="empresa_web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django-template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django-template" type="462c0819:PsiDirectoryNode" />
-              <item name="empresa_web" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -189,8 +200,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="241" y="108" width="1433" height="859" extended-state="0" />
-    <editor active="true" />
+    <frame x="312" y="77" width="1433" height="859" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22237961" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -203,7 +213,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18252933" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.30899608" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -227,34 +237,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/empresa_web/templates/views/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-470">
-          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/empresa_web/templates/views/delete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/empresa_web/templates/views/show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/empresa_web/templates/views/_layouts/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/empresa_web/static/web/js/alert.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -262,68 +244,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/empresa_web/urls.py">
+    <entry file="file://$PROJECT_DIR$/empresa_web/templates/views/login.html" />
+    <entry file="file://$PROJECT_DIR$/empresa_web/templates/crud/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="58" lean-forward="true" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/empresa_web/templates/crud/delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/empresa_web/templates/crud/show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/empresa_web/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/empresa/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="31" column="49" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="49" />
+          <folding>
+            <element signature="e#626#658#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/empresa_web/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="59" lean-forward="true" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/empresa_web/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="56" column="46" lean-forward="true" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+        <state relative-caret-position="510">
+          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/empresa_web/templates/views/home.html">
+    <entry file="file://$PROJECT_DIR$/empresa_web/templates/crud/_layouts/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        <state relative-caret-position="452">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/empresa_web/templates/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/empresa_web/templates/crud/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/empresa/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/empresa_web/templates/views/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="40" lean-forward="true" selection-start-column="40" selection-end-column="40" />
+        <state relative-caret-position="513">
+          <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/empresa_web/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="90">
+          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/empresa/urls.py">
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
-          <folding>
-            <element signature="e#632#664#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
         </state>
       </provider>
     </entry>
