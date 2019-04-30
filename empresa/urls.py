@@ -22,13 +22,13 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('account/', include('django.contrib.auth.urls')),
-    path('', home, name='url_home'),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('home', home, name='url_home'),
     path('funcionario/', show, name='url_show'),
     path('funcionario/create/', create, name='url_create'),
     path('funcionario/update/<int:pk>', update, name='url_update'),
     path('funcionario/delete/<int:pk>', delete, name='url_delete'),
     path('funcionario/pageDelete/<int:pk>',pageDelete, name='url_pageDelete'),
-    path('signup', SignUp.as_view(), name='signup')
+    path('cadastro', SignUp.as_view(), name='signup')
 
 ]
